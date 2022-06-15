@@ -10,6 +10,7 @@ body{
     background-color: azure;
     width: 400px;
     border: 4px solid black;
+    flex-shrink: 0;
 }
 
 #operations{
