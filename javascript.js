@@ -13,7 +13,7 @@ numBts.forEach(numbt=>{
 opBts.forEach(opbt=>{
     opbt.addEventListener('click', function(){
         let pane = document.getElementById('pane');
-        num1 = pane.innerText;
+        num1 = parseInt(pane.innerText);
         pane.innerText += this.innerText;
         op = this.innerText;
         lenNum1 = pane.innerText.length;
@@ -23,8 +23,8 @@ opBts.forEach(opbt=>{
 let eq = document.getElementById('eq');
 eq.addEventListener('click', function(){
     let pane = document.getElementById('pane');
-    let num2 = pane.innerText.substring(lenNum1, pane.innerText.length);
-    pane.innerText = operate(num1, num2, op);
+    let num2 = parseInt(pane.innerText.substring(lenNum1, pane.innerText.length));
+    pane.innerText = operate(num1, num2, op).toFixed(2);
 })
 
 let reset = document.getElementById('reset');
